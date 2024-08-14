@@ -68,41 +68,38 @@ export class Navbar extends Component {
                     <h1 className="text-center text-success">Weather Information</h1>
                     <div className="card" style={{ width: "18rem" }}>
                         <div className="card-body text-center">
-                            <h5 className="card-title">
+                            <div className="card-title">
                                 {!loading && weather.length > 0 ? (
                                     <h3>{weather[0].city_name}</h3>
                                 ) : (
                                     <p>Loading</p>
                                 )}
-                            </h5>
-                            <h6 className="card-subtitle mb-2 text-body-secondary">
+                            </div>
+                            <div className="card-subtitle mb-2 text-body-secondary">
                                 {!loading && weather.length > 0 ? (
                                     <h3>{weather[0].weather.description}</h3>
                                 ) : (
                                     <p>Loading</p>
                                 )}
-                            </h6>
-                            <p className="card-text">
-                                Some quick example text to build on the card title and make up
-                                the bulk of the card's content.
-                            </p>
+                            </div>
+                            
                             <div className="container d-flex align-items-center justify-content-around">
-                                <p>
+                                <div>
                                     Temperature:{" "}
                                     {!loading && weather.length > 0 ? (
                                         <h3>{weather[0].temp}</h3>
                                     ) : (
                                         <p>Loading</p>
                                     )}{" "}
-                                </p>
-                                <p>
+                                </div>
+                                <div>
                                     Visibility:{" "}
                                     {!loading && weather.length > 0 ? (
                                         <h3>{weather[0].vis}</h3>
                                     ) : (
                                         <p>Loading</p>
                                     )}{" "}
-                                </p>
+                                </div>
                             </div>
                         </div>
                     </div>
