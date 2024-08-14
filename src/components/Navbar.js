@@ -18,7 +18,7 @@ export class Navbar extends Component {
     fetchWeatherData = async (city) => {
         this.setState({loading: true});
         let url =
-            `https://api.weatherbit.io/v2.0/current?&key=3451d2ef1e404673a20b77f2f364d315&city=${city}`;
+            `https://api.weatherbit.io/v2.0/current?&key=&city=${city}`;
         let data = await fetch(url);
         let parseData = await data.json();
         this.setState({
