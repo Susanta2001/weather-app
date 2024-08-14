@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 export class Navbar extends Component {
+
+    apiKey = process.env.REACT_APP_WEATHER_API;
     
     constructor() {
         super();
@@ -18,7 +20,7 @@ export class Navbar extends Component {
     fetchWeatherData = async (city) => {
         this.setState({loading: true});
         let url =
-            `https://api.weatherbit.io/v2.0/current?&key=&city=${city}`;
+            `https://api.weatherbit.io/v2.0/current?&key=${this.apiKey}&city=${city}`;
         let data = await fetch(url);
         let parseData = await data.json();
         this.setState({
